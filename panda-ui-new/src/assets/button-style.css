@@ -1,0 +1,85 @@
+/*
+ * Drop-in button styling to make CTAs more intuitive.
+ * Apply the `.cta-button` class and an optional `.cta-button--ghost` or `.cta-button--danger` modifier.
+ * Example:
+ *   <button class="cta-button">
+ *     <span class="cta-button__icon">🍿</span>
+ *     <span>立即购票</span>
+ *   </button>
+ */
+
+:root {
+  --cta-bg: #2563eb;
+  --cta-bg-hover: #1d4ed8;
+  --cta-bg-active: #1e40af;
+  --cta-text: #ffffff;
+  --cta-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+  --cta-border: rgba(255, 255, 255, 0.28);
+  --cta-ghost-bg: rgba(37, 99, 235, 0.1);
+  --cta-danger: #ef4444;
+  --cta-danger-hover: #dc2626;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--cta-border);
+  background: linear-gradient(135deg, var(--cta-bg), #4f46e5);
+  color: var(--cta-text);
+  padding: 12px 18px;
+  border-radius: 9999px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: transform 150ms ease, box-shadow 150ms ease, background 150ms ease;
+  box-shadow: var(--cta-shadow);
+}
+
+.cta-button:hover {
+  background: linear-gradient(135deg, var(--cta-bg-hover), #4338ca);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+}
+
+.cta-button:active {
+  background: linear-gradient(135deg, var(--cta-bg-active), #3730a3);
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.35);
+}
+
+.cta-button__icon {
+  width: 1.25em;
+  height: 1.25em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.16);
+  color: inherit;
+  border-radius: 50%;
+  padding: 6px;
+  line-height: 1;
+  font-size: 0.95em;
+}
+
+.cta-button--ghost {
+  background: var(--cta-ghost-bg);
+  color: var(--cta-bg);
+  border: 1px solid rgba(37, 99, 235, 0.45);
+  box-shadow: none;
+}
+
+.cta-button--ghost:hover {
+  background: rgba(37, 99, 235, 0.18);
+  color: var(--cta-bg-hover);
+}
+
+.cta-button--danger {
+  background: linear-gradient(135deg, var(--cta-danger), #f97316);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 18px rgba(239, 68, 68, 0.35);
+}
+
+.cta-button--danger:hover {
+  background: linear-gradient(135deg, var(--cta-danger-hover), #ea580c);
+}

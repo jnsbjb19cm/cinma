@@ -1,3 +1,12 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:48fa6bcbe47aec80ba3cf56773136c5f9bf97959774bb893b0dca44c75e71a7d
-size 219
+.gitattributes text eol=lf
+
+# Track only binary assets with Git LFS to avoid committing pointer files for source code.
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.jar filter=lfs diff=lfs merge=lfs -text
