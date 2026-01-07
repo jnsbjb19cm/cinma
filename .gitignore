@@ -1,3 +1,50 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:445bc7d6942463a4fecb4182fa55243040a4d3bc5bd3a9f59908310312e91c8d
-size 402
+# macOS
+.DS_Store
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# Node / Vite
+node_modules/
+dist/
+coverage/
+.npm/
+.pnpm-store/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.stylelintcache
+
+# Environment files
+.env
+.env.*
+
+# Java / Maven
+target/
+*.class
+*.log
+*.tmp
+.mvn/timing.properties
+!.mvn/wrapper/maven-wrapper.jar
+
+# IntelliJ project files
+out/
+
+# Playwright artifacts
+playwright-report/
+blob-report/
+.playwright/
+test-results/
+
+# VS Code testing
+.nyc_output/
+
+# OS archives
+*.zip
+*.tar.gz
